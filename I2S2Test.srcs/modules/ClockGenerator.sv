@@ -12,6 +12,9 @@ module ClockGenerator(
 
 	reg lr2; // 195.3125 KHz signal for deriving lr
 
+	initial
+		lr2 = 0;
+
 	always @(posedge lr2) // derive lr from lr2 (195.3125 KHz / 2 = 97.65625 KHz)
 		lr <= ~lr;
 

@@ -2,7 +2,7 @@
 // the I2S2 pmod and connects it to the appropriate rx/tx modules and filters.
 
 module Top (
-		input boardClk, // 100 MHz clock from the Mimas A7 board
+		input bclk, // 100 MHz clock from the Mimas A7 board
 		input linData, // data in from the I2S2 pmod
 
 		output linSclk, // Serial clock out to the I2S2 pmod

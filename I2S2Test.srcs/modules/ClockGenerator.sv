@@ -27,7 +27,7 @@ module ClockGenerator(
 	PLLE2_BASE
 		#(
 			.BANDWIDTH("OPTIMIZED"), // OPTIMIZED, HIGH, LOW
-			.CLKFBOUT_MULT(5), // Multiply value for all CLKOUT, (2-64)
+			.CLKFBOUT_MULT(4), // Multiply value for all CLKOUT, (2-64)
 			.CLKFBOUT_PHASE(0.0), // Phase offset in degrees of CLKFB, (-360.000-360.000).
 			.CLKIN1_PERIOD(10.0), // Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
 			// CLKOUT0_DIVIDE - CLKOUT5_DIVIDE: Divide amount for each CLKOUT (1-128)
@@ -51,7 +51,7 @@ module ClockGenerator(
 			.CLKOUT3_PHASE(0.0),
 			.CLKOUT4_PHASE(0.0),
 			.CLKOUT5_PHASE(0.0),
-			.DIVCLK_DIVIDE(20), // Master division value, (1-56)
+			.DIVCLK_DIVIDE(16), // Master division value, (1-56)
 			.REF_JITTER1(0.0), // Reference input jitter in UI, (0.000-0.999).
 			.STARTUP_WAIT("FALSE") // Delay DONE until PLL Locks, ("TRUE"/"FALSE")
 		)

@@ -3,8 +3,7 @@
 
 module Top (
 		input boardclk, // 100 MHz Board clock from the Mimas A7 board
-		input linData
-, // data in from the I2S2 pmod
+		input linData, // data in from the I2S2 pmod
 
 		output linBclk, // Bit clock out to the I2S2 pmod
 		output linLr, // LR/word select signal out to the I2S2 pmod
@@ -66,5 +65,5 @@ module Top (
 			  ) rightIRR (sclk, {{8{lineinRight[23]}}, lineinRight}, sync, lineoutRight);
 
 
-	
+
 endmodule
